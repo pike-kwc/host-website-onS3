@@ -17,5 +17,15 @@ AWS S3で reactのアプリをホストするプロジェクト
 
 ## デプロイ
 
-1. s3 bucket を作って　例: host-react-app
-2. 
+1. s3 bucket を作って
+
+2. ```bash
+    $PNPM build
+    ```
+
+3. Cloud Frontのdistributionを作って![CloudFront](/docs/distributionSS.png)
+    - Enable OAI bucket access
+    - Update the bucket policy
+
+4. Set custom error codes for 404 and 403 ![ErrorCodes](/docs/errorcodes.png)
+5. Upload to the s3 bucket `aws s3 sync build/ s3://{your-s3-bucket}`
