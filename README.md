@@ -29,3 +29,4 @@ AWS S3で reactのアプリをホストするプロジェクト
 
 4. Set custom error codes for 404 and 403 ![ErrorCodes](/docs/errorcodes.png)
 5. Upload to the s3 bucket `aws s3 sync build/ s3://{your-s3-bucket}`
+6. access via distribution domain url
